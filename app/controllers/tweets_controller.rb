@@ -1,6 +1,7 @@
 class TweetsController < ApplicationController
 
-  def index # indexアクションの定義
+  def index
+    @tweets = Tweet.all
   end
 
 end
