@@ -1,3 +1,4 @@
 Rails.application.routes.draw do
-  get 'tweets' => 'tweets#index' #投稿一覧
+  root 'tweets#index'
+  resources :tweets
 end
