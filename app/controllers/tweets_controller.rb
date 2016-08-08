@@ -10,11 +10,11 @@ class TweetsController < ApplicationController
   end
 
   def create
-    Tweet.create(create_params)
+    Tweet.create(name: tweet_params[:name], image: tweet_params[:image], text: tweet_params[:text], user_id: current_user.id) #tweet_paramsはハッシュ
   end
 
   private
-  def create_params
+  def tweet_params
     params.permit(:name, :text, :image)
   end
 
